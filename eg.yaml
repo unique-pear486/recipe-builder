@@ -1,0 +1,55 @@
+recipe_name: Broccolini & Crumbs
+preparation_time: 20 minutes
+yields:
+  - serves: 4 (as a side)
+ingredients:
+    - olive oil:
+        amounts:
+            - amount: 1/3
+              unit: cup
+    - panko breadcrumbs:
+        amounts:
+            - amount: 1 3/4
+              unit: cup
+    - salt flakes:
+        amounts:
+            - amount: 1
+              unit: teaspoon
+        substitutions:
+            - salt:
+                amounts:
+                    - amount: 1
+                      unit: teaspoon
+    - garlic:
+        amounts:
+            - amount: 4
+              unit: clove
+        processing:
+            - thinly sliced
+    - parsley:
+        amounts:
+            - amount: 1/4
+              unit: cup
+        processing:
+            - roughly cut
+    - lemon rind:
+        amounts:
+            - amount: 1
+              unit: teaspoon
+    - broccolini:
+        amounts:
+            - amount: 460
+              unit: gram
+steps:
+    - step:
+        Heat oil in a frying pan over medium heat.
+    - step:
+        Stir in panko and salt flakes, fry for 5 minutes or until golden.
+    - step:
+        Add garlic, stir for 3 minutes or until cooked.
+    - step:
+        Add chopped parsley and lemon rind.
+    - step:
+        Boil trimmed broccolini for 3 minutes, or until tender.
+    - step:
+        Drain, toss with breadcrumb mixture.
