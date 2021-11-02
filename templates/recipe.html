@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ recipe.recipe_name }}</h1>
+{% if img %}
+<img src={{ img.name }}>
+{% endif %}
+<h3>Ingredients</h3>
+<ul>
+  {% for item in recipe.ingredients recursive %}
+  {% set outer_loop = loop %}
+  {% for name, i in item.items() %}
+  <li>
+    {{ i.amounts[0]['amount'] }} {{ i.amounts[0].unit }} {{ name }}
+    {%- if i.processing %}, {{ i.processing|join(', ') }}
+    {% endif %}
+    {% if i.notes %}
+    {% set notes = i.notes %}{% include "note.html" %}
+    {% endif %}
+    {% if i.substitutions %}
+    <br><em style="padding-left: 40px;">or</em><ul>
+    {{- outer_loop(i.substitutions) }}</ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+  {% endfor %}
+</ul>
+<h3>Steps</h3>
+<ol>
+  {% for step in recipe.steps %}
+  <li>{{ step.step }}
+    {% if step.notes %}
+    {% set notes = step.notes %}{% include "note.html" %}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}

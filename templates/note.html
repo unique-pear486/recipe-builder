@@ -1,0 +1,13 @@
+<blockquote>
+  {% if notes|length() > 1 %}
+  <ul>
+  {% for note in notes %}
+    <li>{{ note.note }}</li>
+  {% endfor %}
+  </ul>
+  {% else %}
+  {% for note in notes %}
+  {{ note.note }}
+  {% endfor %}
+  {% endif %}
+</blockquote>

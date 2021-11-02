@@ -56,7 +56,7 @@ class OvenTemp(BaseModel):
 
 
 class Amount(BaseModel):
-    amount: Number
+    amount: str
     unit: str
 
 
