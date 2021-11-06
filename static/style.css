@@ -19,3 +19,16 @@ blockquote {
 blockquote > ul {
     margin-left: -1.33em;
 }
+.source {
+    width: 100%;
+    table-layout: fixed;
+}
+.source ul {
+    margin-top: 0;
+}
+.source td:first-child {
+    text-align: left;
+}
+.source td:last-child {
+    text-align: right;
+}

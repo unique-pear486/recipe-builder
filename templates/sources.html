@@ -1,0 +1,17 @@
+{% if recipe.source_url %}
+<a href="{{ recipe.source_url }}">source</a><br>
+{% endif %}
+{% if recipe.source_authors %}
+<em>With thanks to:</em>
+<ul>
+  {% for author in recipe.source_authors %}
+  <li>{{ author }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if recipe.source_book %}
+  <em>{{ recipe.source_book.title }}</em>
+  {% if recipe.source_book.authors %} by {{ recipe.source_book.authors|join(', ') }}{% endif %}<br>
+  {% if recipe.source_book.isbn %}ISBN: {{ recipe.source_book.isbn }}<br>{% endif %}
+  {% if recipe.source_book.notes %}{% set notes = recipe.source_book.notes %}{% include "note.html" %}{% endif %}
+{% endif %}

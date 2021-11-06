@@ -1,0 +1,6 @@
+{% if recipe.preparation_time or recipe.oven_time %}&#x25f4;{% endif %}
+{% if recipe.preparation_time %}Prep Time: {{ recipe.preparation_time }}<br>{% endif %}
+{% if recipe.oven_time %}Oven Time: {{ recipe.oven_time }}<br>{% endif %}
+{% if recipe.oven_temp or recipe.oven_fan %}Oven: {% endif %}
+{% if recipe.oven_temp %}{{ recipe.oven_temp.amount }}{{ recipe.oven_temp.unit.value }} {% endif %}
+{% if recipe.oven_fan %}Fan {{ recipe.oven_fan.value }}{% endif %}<br>

@@ -4,6 +4,10 @@
 {% if img %}
 <img src={{ img.name }}>
 {% endif %}
+<table class="source"><tr>
+    <td>{% include "sources.html" %}</td>
+    <td> {% include "times.html" %}</td>
+  </tr></table>
 <h3>Ingredients</h3>
 <ul>
   {% for item in recipe.ingredients recursive %}
