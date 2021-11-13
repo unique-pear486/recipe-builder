@@ -109,6 +109,7 @@ class Recipe(YamlModel):
                 raise ValueError('Number of yields and ingredient amounts must'
                                  ' match\n'
                                  f'{name} {len(amounts)} != {len(v)} yields')
+        return v
 
 
 def main():

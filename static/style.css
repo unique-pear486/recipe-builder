@@ -32,3 +32,9 @@ blockquote > ul {
 .source td:last-child {
     text-align: right;
 }
+.yields {
+    text-align:left;
+}
+.yields h5 {
+    margin-bottom: 0;
+}

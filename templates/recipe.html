@@ -8,6 +8,14 @@
     <td>{% include "sources.html" %}</td>
     <td> {% include "times.html" %}</td>
   </tr></table>
+{% if recipe.yields %}
+<div class="yields">
+  <h5>Yields:</h5>
+  {% for name, amount in recipe.yields[0].items() %}
+  {{ amount }} {{ name }}
+  {% endfor %}
+</div>
+{% endif %}
 <h3>Ingredients</h3>
 <ul>
   {% for item in recipe.ingredients recursive %}
